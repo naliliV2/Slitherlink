@@ -29,11 +29,11 @@ def main():
     if cmd == "":
         reset()
         start()
-    elif cmd == "h" or "help":
+    elif cmd == "h" or cmd == "help":
         print(" '' = Lance l'algorithme avec un carré 5*5")
         print(" 'size' = Lance un programme avec une taille que vous définisez")
         print(" 'exit' = Ferme le programme")
-    elif cmd == "s" or "size":
+    elif cmd == "s" or cmd == "size":
         reset()
         start(int(input("Quelle taille voulez-vous pour votre grille ? ")))
     elif cmd == "exit":
