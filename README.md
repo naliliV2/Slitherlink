@@ -28,7 +28,7 @@ parameter.py : paramétrage de la turtle (librairy python).
 
   # Remerciement
   
-  Je remercie Glcraft (https://github.com/glcraft) qui m’a énormément aidé pour savoir comment j'allais m'y prendre pour faire le programme. Sans lui, je doute que j'aurai réussi) à faire ça. 
+  Je remercie Glcraft (https://github.com/glcraft) qui m’a énormément aidé pour savoir comment j'allais m'y prendre pour faire le programme. Sans lui, je doute que j'aurai réussi à faire ça. Alors un grand merci ! 
 
 # EN : 
 Not yet translated.
