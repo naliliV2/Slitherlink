@@ -25,6 +25,7 @@ def between_two_square(size, grid): #Verified ##A refiare en plus propre
                break 
             
             #En angle 
+            succes_bts = 0
             try: #Haut droite 
                 if grid[line-1][column+1] == 2 and grid[line-1][column] == 2 and grid[line][column+1]==2:
                     grid[line][column] = 1
@@ -34,46 +35,100 @@ def between_two_square(size, grid): #Verified ##A refiare en plus propre
                         print(grid[i])
             except IndexError:
                 ussless = 0
-            finally:
-                try: #Haut gauche
-                    if grid[line-1][column-1] == 2 and grid[line-1][column] == 2 and grid[line][column-1]==2:
-                        grid[line][column] = 1
-                        succes_bts = 1
-                        print("BTS AHG : ", "grid =(", line, column, ")", "=1")
-                        for i in range(len(grid)):
-                            print(grid[i])
-                except IndexError:
-                    ussless = 0
-                finally:
-                    try: #Bas droite
-                        if grid[line+1][column+1] == 2 and grid[line+1][column] == 2 and grid[line][column+1]==2:
-                            grid[line][column] = 1
-                            succes_bts = 1
-                            print("BTS ABD : ", "grid =(", line, column, ")", "=1")
-                            for i in range(len(grid)):
-                                print(grid[i])
-                    except IndexError:
-                        ussless = 0
-                    finally:
-                        try: #Bas gauche
-                            if grid[line+1][column-1] == 2 and grid[line+1][column] == 2 and grid[line][column-1]==2:
-                                grid[line][column] = 1
-                                succes_bts = 1
-                                print("BTS ABG : ", "grid =(", line, column, ")", "=1")
-                                for i in range(len(grid)):
-                                    print(grid[i])
-                        except IndexError:
-                            ussless = 0
+            
+            try: #Haut gauche
+                if grid[line-1][column-1] == 2 and grid[line-1][column] == 2 and grid[line][column-1]==2:
+                    grid[line][column] = 1
+                    succes_bts = 1
+                    print("BTS AHG : ", "grid =(", line, column, ")", "=1")
+                    for i in range(len(grid)):
+                        print(grid[i])
+            except IndexError:
+                ussless = 0
+
+            try: #Bas droite
+                if grid[line+1][column+1] == 2 and grid[line+1][column] == 2 and grid[line][column+1]==2:
+                    grid[line][column] = 1
+                    succes_bts = 1
+                    print("BTS ABD : ", "grid =(", line, column, ")", "=1")
+                    for i in range(len(grid)):
+                        print(grid[i])
+            except IndexError:
+                ussless = 0
+
+            try: #Bas gauche
+                if grid[line+1][column-1] == 2 and grid[line+1][column] == 2 and grid[line][column-1]==2:
+                    grid[line][column] = 1
+                    succes_bts = 1
+                    print("BTS ABG : ", "grid =(", line, column, ")", "=1")
+                    for i in range(len(grid)):
+                        print(grid[i])
+            except IndexError:
+                ussless = 0
+
                 if succes_bts == 1:
                     continue
            
-            try: 
-                if grid[line-1][column] == 2 and grid[line+1][column] == 2: #Vertical
-                    if 
-                    
+           
+            try: #Vertical
+                if grid[line+1][column] == 2 and grid[line-1][column] == 2:
+                    if column == 0 or column == size-1:
+                        grid[line][column] = 1
+                        print("BTS V : ", "grid =(", line, column, ")", "=1")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue
+                    else:
+                        grid[line][column] = 0  
+                        print("BTS V : ", "grid =(", line, column, ")", "=0")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue          
             except IndexError:
+                if line == size-1:
+                    if grid[line-1][column] == 2:
+                        grid[line][column] = 0
+                        print("BTS IE V : ", "grid =(", line, column, ")", "=0")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue
+                    if line == 0:
+                        if grid[line+1][column] == 2:
+                            grid[line][column] == 0
+                            print("BTS IE H : ", "grid =(", line, column, ")", "=0")
+                            for i in range(len(grid)):
+                                print(grid[i])
+                            continue
 
-
+            try: #Horizontal
+                if grid[line][column+1] == 2 and grid[line][column-1] == 2:
+                    if line == 0 or line == size-1:
+                        grid[line][column] = 1
+                        print("BTS H : ", "grid =(", line, column, ")", "=1")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue
+                    else:
+                        grid[line][column] = 0 
+                        print("BTS H : ", "grid =(", line, column, ")", "=0")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue
+            except IndexError: 
+                if column == size-1:
+                    if grid[line][column-1] == 2:
+                        grid[line][column] = 0
+                        print("BTS IE H : ", "grid =(", line, column, ")", "=0")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue
+                elif column == 0:
+                    if grid[line][column+1] == 2:
+                        grid[line][column] = 0
+                        print("BTS IE H : ", "grid =(", line, column, ")", "=0")
+                        for i in range(len(grid)):
+                            print(grid[i])
+                        continue
 
     return grid
 
