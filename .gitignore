@@ -1,0 +1,5 @@
+.vscode/launch.json
+__pycache__/check_rules.cpython-39.pyc
+__pycache__/mine.cpython-39.pyc
+__pycache__/parameter.cpython-39.pyc
+__pycache__/draw.cpython-39.pyc

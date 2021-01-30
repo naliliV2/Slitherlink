@@ -23,6 +23,7 @@ def start(size = 5, size_square = 50):
         grid = mine(size, grid)
         grid = rules(size, grid)
     
+    print()
     for i in range(len(grid)):
         print(grid[i])
     input("finish")
