@@ -2,7 +2,7 @@
 from turtle import Screen, Turtle
 screen = Screen()
 turtle = Turtle()
-turtle._tracer(0, 0)
+#turtle._tracer(0, 0)
 from random import choice
 
 #import les fichiers externe. 
@@ -22,12 +22,15 @@ def start(size = 5, size_square = 50):
     for _ in range(random_round(size)):
         grid = mine(size, grid)
         grid = rules(size, grid)
-    
     print()
     for i in range(len(grid)):
         print(grid[i])
+    parameter(turtle, size, size_square)
+    draw_grid(turtle, size, size_square)
+    grid = transform_grid(size, grid)
+    draw_shape(turtle, grid, size, size_square)
     input("finish")
-    turtle._update()
+    #turtle._update()
 
 def main():
     input('test')
