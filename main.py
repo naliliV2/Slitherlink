@@ -23,11 +23,11 @@ def start(size = 5, size_square = 50):
         grid = mine(size, grid)
         grid = rules(size, grid)
     print()
-    for i in range(len(grid)):
-        print(grid[i])
     parameter(turtle, size, size_square)
     draw_grid(turtle, size, size_square)
     grid = transform_grid(size, grid)
+    for i in range(len(grid)):
+        print(grid[i])
     draw_shape(turtle, grid, size, size_square)
     input("finish")
     #turtle._update()

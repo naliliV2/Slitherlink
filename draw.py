@@ -13,11 +13,11 @@ def draw_grid(turtle, size, size_square = 50):
         turtle.forward(size_square)
 
 def transform_grid(size, grid):
-    for line in range(1, size, 1):
-        for column in range(1, size, 1):
+    for line in range(0, size, 1):
+        for column in range(0, size, 1):
             if grid[line][column] == 0 or grid[line][column] == 1:
                 grid[line][column] = 1
-            else:
+            elif grid[line][column] == 2:
                 grid[line][column] = 0
     return grid
 
@@ -78,8 +78,8 @@ def draw_shape(turtle, grid, size, size_square = 50):
     turtle.left(90)
     
     #Détecte si un carré qui est au bord de la grille à une valeur de 1 pour tracé un trait.
-    for line in range(-size, 0, 1): #Coté droit
-        if grid[line][0] == 1:
+    for line in range(-(size-1), 1, 1): #Coté droit 
+        if grid[-line][0] == 1:
             turtle.pendown()
             turtle.forward(size_square)
             turtle.penup()
@@ -96,7 +96,7 @@ def draw_shape(turtle, grid, size, size_square = 50):
             turtle.forward(size_square)
     turtle.right(90)
 
-    for line in range(0, size, 1): #Coté gauche
+    for line in range(0, size, 1): #Coté gauche 
         if grid[line][size-1] == 1:
             turtle.pendown()
             turtle.forward(size_square)
@@ -105,8 +105,8 @@ def draw_shape(turtle, grid, size, size_square = 50):
             turtle.forward(size_square)
     turtle.right(90)
 
-    for column in range(-size, 0, 1):#Coté bas
-        if grid[size-1][column] == 1:
+    for column in range(-(size-1), 1, 1):#Coté bas ###erreur
+        if grid[size-1][-column] == 1:
             turtle.pendown()
             turtle.forward(size_square)
             turtle.penup()
