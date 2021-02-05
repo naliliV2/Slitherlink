@@ -26,7 +26,6 @@ O  O  O     Y = Carré qu'on veut prendre
 
 Dans ce cas, il est impossible de le prendre car il a pas accès au "vide".
 
-
 # Règle N°3 : Diagonal 
 
 On ne peut prendre un carré si il a un carré déjà mangé en diagonal 
@@ -50,7 +49,7 @@ Dans ce cas, il peut être mangé.
 
 On ne peut prendre un carré qui se situe entre 2 carré déjà mangé (en angle ou en vertical / honrizontal)
 
-Exemple (en ignorant la règle de la diagonal) :
+Exemple 1 (en ignorant la règle de la diagonal) :
 O  X  O     X = Carré déjà manger
 O  Y  X     O = Carré qui peut être mangé
 O  O  O     Y = Carré qu'on veut prendre
@@ -63,18 +62,17 @@ O  X  O     Y = Carré qu'on veut prendre
 Dans ces cas, ce n'est pas possible de le prendre car il coupe la figure en 2
 
 **Exception :**
-Il peut avoir une exception, en effet, pour les angles, si le carré en diagonal entre les deux carrés, il peut être mangé. Pour les verticales / horizontales, il faut que il y a 3 carré prit a coté (droite ou gauche pour honrizontal, haut / bas pour honrizontal)
+Il peut avoir une exception, en effet, par exemple pour les angles, si le carré qui est en diagonal entre les deux carrés est mangé, il peut être mangé. Pour les verticales / horizontales, il faut qu'il y est 3 carrés prit à coté (droite / gauche pour honrizontal, haut / bas pour honrizontal)
 
-Exemple 1 :
+Exemple 3 :
 O  X  X     X = Carré déjà manger
 O  Y  X     O = Carré qui peut être mangé
 O  O  O     Y = Carré qu'on veut prendre
 
-Exemple 2 : 
+Exemple 4 : 
 X  X  O  O     X = Carré déjà manger
 X  Y  O  O     O = Carré qui peut être mangé
 X  X  O  O     Y = Carré qu'on veut prendre
 O  O  O  O
 
 Dans ces cas, il est possible de le manger.
-
