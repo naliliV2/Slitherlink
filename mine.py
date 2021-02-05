@@ -26,13 +26,16 @@ def defined_mine(size, grid):
                 mine.append([line, column])
 
     if len(mine) == 0:
-        print(grid)
+        return "Stop"
     return choice(mine)
 
 def mine(size, grid):
     mine = defined_mine(size, grid)
-    grid[mine[0]][mine[1]] = 2
-    return grid 
+    if mine != "Stop":
+        grid[mine[0]][mine[1]] = 2
+        return grid, "Good"
+    else:
+        return grid, "Stop"
 
 if __name__ == "__main__":
     print("Vous avez lancer le mauvais fichier, merci de lancer 'main.py'")    

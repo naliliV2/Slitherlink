@@ -2,7 +2,7 @@ def rules(size, grid):
     grid = acces_void(size, grid) #Qui met des 1 ##Corriged
     grid = between_two_square(size, grid) 
     
-    grid = void_diago(size, grid) #Qui met des 0 ##Corriged 
+    grid = void_diago(size, grid)
     grid = max_take(size, grid) #Corriged
     return grid
 

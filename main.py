@@ -2,7 +2,7 @@
 from turtle import Screen, Turtle
 screen = Screen()
 turtle = Turtle()
-#turtle._tracer(0, 0)
+turtle._tracer(0, 0)
 from random import choice
 
 #import les fichiers externe. 
@@ -20,7 +20,9 @@ def reset():
 def start(size = 5, size_square = 50):
     grid = create_grid(size, grid=[]) #mine.py
     for _ in range(random_round(size)):
-        grid = mine(size, grid)
+        grid, state = mine(size, grid)
+        if state == "Stop":
+            break
         grid = rules(size, grid)
     print()
     parameter(turtle, size, size_square)
@@ -30,12 +32,12 @@ def start(size = 5, size_square = 50):
         print(grid[i])
     draw_shape(turtle, grid, size, size_square)
     input("finish")
-    #turtle._update()
+    turtle._update()
 
 def main():
-    input('test')
-    start()
-
+    while not False:
+        reset()
+        start()
 
 if __name__ == "__main__":
     print("Faite 'help' pour avoir plus d'information, sinon faite enter")
