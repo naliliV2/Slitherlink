@@ -28,6 +28,7 @@ def start(size = 5, size_square = 50):
     parameter(turtle, size, size_square)
     draw_grid(turtle, size, size_square)
     grid = transform_grid(size, grid)
+    
     for i in range(len(grid)):
         print(grid[i])
     draw_shape(turtle, grid, size, size_square)
