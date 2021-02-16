@@ -6,16 +6,44 @@ def rules(size, grid):
 def around(size, grid):
     for line in range(1, size-1,1):
         for comlumn in range(1, size-1, 1):
-            temp = []
-            temp.append(grid[line-1][comlumn-1])
-            temp.append(grid[line-1][comlumn])
-            temp.append(grid[line-1][comlumn+1])
-            temp.append(grid[line][comlumn+1])
-            temp.append(grid[line+1][comlumn+1])
-            temp.append(grid[line+1][comlumn])
-            temp.append(grid[line+1][comlumn-1])
-            temp.append(grid[line][comlumn-1])
-            temp
+            try:
+                temp = []
+                temp[len(temp):] = [grid[line-1][comlumn-1], grid[line-1][comlumn], grid[line-1][comlumn+1]]
+                temp[len(temp):] = [grid[line][comlumn+1]]
+                temp[len(temp):] = [grid[line+1][comlumn+1], grid[line+1][comlumn], grid[line+1][comlumn-1]]
+                temp[len(temp):] = [grid[line][comlumn-1]]
+            except IndexError:
+                temp = []
+                if comlumn == 0:
+                    if line == 0:
+                        temp[len(temp):] = [2, 2, 2]
+                        temp[len(temp):] = [grid[line][comlumn+1]]
+                        temp[len(temp):] = [grid[line+1][comlumn+1], grid[line+1][comlumn], 2]
+                        temp[len(temp):] = [2]
+                    elif line == size-1:
+                        temp[len(temp):] = [2, grid[line-1][comlumn], grid[line-1][comlumn+1]]
+                        temp[len(temp):] = [grid[line][comlumn+1]]
+                        temp[len(temp):] = [2, 2, 2]
+                        temp[len(temp):] = [2]
+                    else: 
+                        temp[len(temp):] = [2, grid[line-1][comlumn], grid[line-1][comlumn+1]]
+                        temp[len(temp):] = [grid[line][comlumn+1]]
+                        temp[len(temp):] = [grid[line+1][comlumn+1], grid[line+1][comlumn], 22]
+                        temp[len(temp):] = [2]
+                if comlumn == size-1:
+                    if line == 0:
+                        temp[len(temp):] = [grid[line-1][comlumn-1], grid[line-1][comlumn], grid[line-1][comlumn+1]]
+                        temp[len(temp):] = [grid[line][comlumn+1]]
+                        temp[len(temp):] = [grid[line+1][comlumn+1], grid[line+1][comlumn], grid[line+1][comlumn-1]]
+                        temp[len(temp):] = [grid[line][comlumn-1]]
+                    elif line == size-1:
+                    else: 
+                if line == 0:
+                    if comlumn == 0:
+                    elif comlumn == size-1:
+                    else: 
+                if line == size-1:
+                    if comlumn
 
 def acces_void(size, grid): #Verified 
     for line in range(1, size-1, 1):
