@@ -63,17 +63,18 @@ def around(size, grid):
             enclenched = 0
             for i in range(8):
                 if enclenched == 1:
-                    if temp2 == 2:
-                        nb+=1
-                        if nb == temp2:
-                            grid[line][comlumn] = 1
-                            break #C'est bon
+                    if nb == temp2:
+                        grid[line][comlumn] = 1
+                        break #C'est bon
+                    elif temp[i] == 2:
+                        nb+=1  
                     else:  
                         grid[line][comlumn] = 0
                         break #C'est pas bon
                 else:
-                    if temp2 == 2:
+                    if temp[i] == 2:
                         enclenched = 1
+                        nb+=1
     return grid
 
 def acces_void(size, grid): #Verified 
