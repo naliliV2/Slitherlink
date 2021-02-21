@@ -17,7 +17,7 @@ def reset():
     turtle.clear()
 
 #Lance le progamme entier
-def start(size = 5, size_square = 50):
+def start(size = 5, size_square = 20):
     grid = create_grid(size, grid=[]) #mine.py
     for _ in range(random_round(size)):
         grid, state = mine(size, grid)
