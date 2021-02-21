@@ -9,9 +9,6 @@ def around(size, grid):
         for column in range(0, size, 1):
             print(line, column)
             if grid[line][column] == 2:
-                print("Deja 2 :", line, column)
-                for i in range(len(grid)):
-                    print(grid[i])
                 continue
             try:
                 temp = []
@@ -71,19 +68,10 @@ def around(size, grid):
             nb = 0
             enclenched = 0
 
-            if temp2 == 0: #Pas de 2 au allentour. 
-                print("Any 2 :", line, column)
-                for i in range(len(grid)):
-                    print(grid[i])
+            if temp2 == 0: #Pas de 2 au allentour.
                 continue
 
-            elif temp2 == 8: #A SUPPRIMER CAR NE DOIS JAMAIS ARRIVER
-                input("ERREUR BRO, temp2 = 8")
-
             elif temp[1] !=2 and temp[3] !=2 and temp[5] !=2 and temp[7] !=2: #Si il y a des 2 et aucun adjaçant = forcément faux
-                print("No 2 adjacant 4 :", line, column)
-                for i in range(len(grid)):
-                    print(grid[i])
                 continue
 
             while True: # Décallage
@@ -99,17 +87,11 @@ def around(size, grid):
                 if enclenched == 1:
                     if nb == temp2:
                         grid[line][column] = 1
-                        print("good verification :", line, column)
-                        for i in range(len(grid)):
-                            print(grid[i])
                         break #C'est bon
                     elif temp[i] == 2:
                         nb+=1  
                     else:  
                         grid[line][column] = 0
-                        print("Bad verification :", line, column)
-                        for i in range(len(grid)):
-                            print(grid[i])
                         break #C'est pas bon
                 else:
                     if temp[i] == 2:
@@ -121,21 +103,16 @@ def acces_void(size, grid): #Verified
     for line in range(1, size-1, 1):
         for column in range(1, size-1, 1):
             if grid[line][column] == 2:
-                print("Acces void déjà pris :", line, column)
-                for i in range(len(grid)):
-                    print(grid[i])
+                continue
             
             elif grid[line-1][column] == 2 or grid[line+1][column] == 2 or grid[line][column-1] == 2 or grid[line][column+1] == 2:  
                 grid[line][column] = 1
-                print("Good acces void :", line, column)
-                for i in range(len(grid)):
-                    print(grid[i])
+                continue
             
             elif grid[line-1][column] == 0 or 1 and grid[line+1][column] == 0 or 1 and grid[line][column-1] == 0 or 1 and grid[line][column+1] == 0 or 1:
                 grid[line][column] = 0
-                print("Bad acces void :", line, column)
-                for i in range(len(grid)):
-                    print(grid[i])
+                continue
+            
     return grid
 
 def max_take(size, grid): #Verified 
@@ -144,9 +121,6 @@ def max_take(size, grid): #Verified
             for column in range(0, size, 1):
                 if grid[line][column] == 1:
                     grid[line][column] = 0
-                    print("Max take :", line, column)
-                    for i in range(len(grid)):
-                        print(grid[i])
                     
     for column in range(0, size, 1): #Vertical
         temp = 0
@@ -157,9 +131,7 @@ def max_take(size, grid): #Verified
             for line in range(0, size, 1):
                 if grid[line][column] == 1:
                     grid[line][column] = 0
-                    print("Max take :", line, column)
-                    for i in range(len(grid)):
-                        print(grid[i])
+                    
     return grid
 
 if __name__ == "__main__":
