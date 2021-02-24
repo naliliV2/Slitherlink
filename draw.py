@@ -1,7 +1,7 @@
 def draw_grid(turtle, size, size_square = 50): 
     for _ in range(size): #Nombre de collone
         for _ in range(size): #Nombre de carré dans la collone 
-            for _ in range(4): #Dessine les carrés ###A optimiser dans la 1.05
+            for _ in range(4): #Dessine les carrés 
                 turtle.forward(size_square)
                 turtle.left(90)
             turtle.left(90)
@@ -13,6 +13,12 @@ def draw_grid(turtle, size, size_square = 50):
         turtle.forward(size_square)
 
 def transform_grid(size, grid):
+    '''
+    Transforme les 0-1 en 1 et les 2 en 0 
+
+    0 signifiant vide
+    1 signifiant plein
+    '''
     for line in range(0, size, 1):
         for column in range(0, size, 1):
             if grid[line][column] == 0 or grid[line][column] == 1:
@@ -23,6 +29,9 @@ def transform_grid(size, grid):
 
 #Dessine la figure qui a été généré.
 def draw_shape(turtle, grid, size, size_square = 50):
+    '''
+    Dessine la figure qui a été généré en mettant un trait entre les carrés vide / plein. 
+    '''
     #Mise en place au point 0 et parametre la turtle. ##A mettre dans parameter.py dans la 1.05
     turtle.penup()
     turtle.setpos((0-(size*size_square))/2, (0-(size*size_square))/2)

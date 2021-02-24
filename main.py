@@ -1,45 +1,47 @@
-#import la turtle
+#import les libs
 from turtle import Screen, Turtle
+from random import choice
+
+#Créé la turtle
 screen = Screen()
 turtle = Turtle()
-turtle._tracer(0, 0)
-from random import choice
 
 #import les fichiers externe. 
 from mine import *
 from parameter import *
 from draw import *
 from check_rules import *
+from console import *
 
 #Reset la grille
-##A amélioré dans la 2.1 qui permettra d'effacer que le trait rouge.
 def reset():
     turtle.clear()
 
 #Lance le progamme entier
-def start(size = 5, size_square = 20):
+def start(size, size_square):
     grid = create_grid(size, grid=[]) #mine.py
+    
     for _ in range(random_round(size)):
         grid, state = mine(size, grid)
         if state == "Stop":
             break
         grid = rules(size, grid)
-    print()
+    
     parameter(turtle, size, size_square)
     draw_grid(turtle, size, size_square)
     grid = transform_grid(size, grid)
-    
-    for i in range(len(grid)):
-        print(grid[i])
     draw_shape(turtle, grid, size, size_square)
-    input("finish")
     turtle._update()
 
 def main():
+    #Taille par défaut
+    size = 7
+    size_square = 40
     while not False:
+        size, size_square = console(size, size_square)
         reset()
-        start()
+        start(size, size_square)
 
 if __name__ == "__main__":
-    print("Faite 'help' pour avoir plus d'information, sinon faite enter")
+    print("Faite 'help' pour avoir plus d'information, sinon appuyez sur entrer pour lancer le programme")
     main()    

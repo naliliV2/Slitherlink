@@ -1,5 +1,7 @@
 #Définie les param. de la turtle.
 def parameter(turtle, size, size_square = 50): 
+    turtle._tracer(0, 0)
+
     turtle.speed(0)
     turtle.hideturtle()
     turtle.pensize(1)
