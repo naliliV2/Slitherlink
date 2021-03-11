@@ -26,11 +26,11 @@ parameter.py : paramètre  la turtle (librairie python).
 Ce programme créé une figure dite "pleine" qui va miner des carrés aléatoire petit à petit. 
 Cependant, on ne peut pas manger n'importe quel carré, il y a 3 règles : 
 
-**Première règle** : Si un carré n'à pas accès a l'exterieur de la grille, il ne peut pas être miné.
-**Deuxième règle** : Prenons tout les 8 carrés a coté de celui qu'on veut miner : 
-                     Si tout les carré déjà mangé sont collés; il est possible de le prendre
-                     Sinon ça veux dire qu'ils sont pas tous collés, il est impossible de le prendre
-                     Remarque : Si le carré qu'on veut tester est sur le bord, on met des X là où il y a du vide.
+**Première règle** :\ Si un carré n'à pas accès a l'exterieur de la grille, il ne peut pas être miné.\
+**Deuxième règle** :\ Prenons tout les 8 carrés a coté de celui qu'on veut miner : \
+                     Si tout les carré déjà mangé sont collés; il est possible de le prendre\
+                     Sinon ça veux dire qu'ils sont pas tous collés, il est impossible de le prendre \
+                     Remarque : Si le carré qu'on veut tester est sur le bord, on met des X là où il y a du vide. \
 
 
 # EN : 
