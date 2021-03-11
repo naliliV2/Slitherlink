@@ -5,7 +5,13 @@ def rules(size, grid):
     return grid
 
 def acces_void(size, grid): #Verified 
-    for line in range(1, size-1, 1):
+    '''
+    1ère règle 
+
+    Si un carré n'à pas accès a l'exterieur de la grille, il ne peut pas être miné.
+    '''
+
+    for line in range(1, size-1, 1): #Seul les carrés au milieu sont concerné. 
         for column in range(1, size-1, 1):
             if grid[line][column] == 2:
                 continue
@@ -24,7 +30,6 @@ def around(size, grid):
     '''
     2ème règle
     
-    Explication :
     Prenons tout les 8 carrés a coté de celui qu'on veut test : 
     Si tout les X (2) sont collés; il est possible de le prendre
     Si ils sont pas tous collés, il est impossible de le prendre
