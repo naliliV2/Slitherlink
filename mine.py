@@ -2,7 +2,7 @@ from random import choice, randint
 
 def create_grid(size, grid = []):
     '''
-    Créé le tableau a double dimension (line, column)
+    Créé le tableau à double dimension (line, column)
 
     0 = Ne peut être pris
     1 = Peut être pris 

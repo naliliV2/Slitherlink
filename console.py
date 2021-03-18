@@ -1,4 +1,7 @@
 def console(size, size_square):
+    '''
+    Fait des commandes
+    '''
     while True:
         awser = input(">>> ") 
         if awser == '':

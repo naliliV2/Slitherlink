@@ -14,7 +14,7 @@ def draw_grid(turtle, size, size_square):
 
 def transform_grid(size, grid):
     '''
-    Transforme les 0-1 en 1 et les 2 en 0 
+    Transforme les 0 ou 1 en 1 et les 2 en 0 
 
     0 signifiant vide
     1 signifiant plein
@@ -141,6 +141,6 @@ def draw_number(turtle, size, size_square, number_grid):
             turtle.write(str(number_grid[-line-1][column]), font=style, align='center')
             turtle.forward(size_square)
     turtle.right(90)
-            
+     
 if __name__ == "__main__":
     print("Vous avez lancer le mauvais fichier, merci de lancer 'main.py'")

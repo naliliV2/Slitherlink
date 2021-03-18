@@ -1,4 +1,4 @@
-#import les libs
+#import les librairies
 from turtle import Screen, Turtle
 from random import choice
 
