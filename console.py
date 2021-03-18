@@ -18,7 +18,7 @@ def console(size, size_square):
             awser = int(input("Saisisez votre nouvelle taille de grille \n>>> "))
             size = awser
         elif awser == 'SizeSquare' or awser == 'sizesquare' or awser == 'ss':
-            awser = int(input("Saisize votre nouvelle taille de vos carrés \n>>> "))
+            awser = int(input("Saisisez votre nouvelle taille de vos carrés \n>>> "))
             size_square = awser
         elif awser == "exit":
             10/0 #Provoque une division par 0 pour fermer le programme

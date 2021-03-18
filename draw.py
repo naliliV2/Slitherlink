@@ -1,4 +1,4 @@
-def draw_grid(turtle, size, size_square = 50): 
+def draw_grid(turtle, size, size_square): 
     for _ in range(size): #Nombre de collone
         for _ in range(size): #Nombre de carré dans la collone 
             for _ in range(4): #Dessine les carrés 
@@ -28,7 +28,7 @@ def transform_grid(size, grid):
     return grid
 
 #Dessine la figure qui a été généré.
-def draw_shape(turtle, grid, size, size_square = 50):
+def draw_shape(turtle, grid, size, size_square, number_grid):
     '''
     Dessine la figure qui a été généré en mettant un trait entre les carrés vide / plein. 
     '''
@@ -45,6 +45,8 @@ def draw_shape(turtle, grid, size, size_square = 50):
     for line in range(0, size, 1):
         for column in range(1, size, 1):
             if grid[line][column-1] == 0 and grid[line][column] == 1 or grid[line][column-1] == 1 and grid[line][column] == 0:
+                number_grid[line][column-1] += 1
+                number_grid[line][column] += 1
                 turtle.forward(size_square)
                 turtle.left(90)
                 turtle.pendown()
@@ -71,6 +73,8 @@ def draw_shape(turtle, grid, size, size_square = 50):
     for line in range(0, size-1, 1):
         for column in range(0, size, 1):
             if grid[line][column] == 0 and grid[line+1][column] == 1 or grid[line][column] == 1 and grid[line+1][column] == 0:
+                number_grid[line+1][column] += 1
+                number_grid[line][column] += 1
                 turtle.pendown()
                 turtle.forward(size_square)
                 turtle.penup()
@@ -89,6 +93,7 @@ def draw_shape(turtle, grid, size, size_square = 50):
     #Détecte si un carré qui est au bord de la grille à une valeur de 1 pour tracé un trait.
     for line in range(-(size-1), 1, 1): #Coté droit 
         if grid[-line][0] == 1:
+            number_grid[-line][0] += 1
             turtle.pendown()
             turtle.forward(size_square)
             turtle.penup()
@@ -98,6 +103,7 @@ def draw_shape(turtle, grid, size, size_square = 50):
 
     for column in range(0, size, 1): #Coté haut
         if grid[0][column] == 1:
+            number_grid[0][column] += 1
             turtle.pendown()
             turtle.forward(size_square)
             turtle.penup()
@@ -107,6 +113,7 @@ def draw_shape(turtle, grid, size, size_square = 50):
 
     for line in range(0, size, 1): #Coté gauche 
         if grid[line][size-1] == 1:
+            number_grid[line][size-1] += 1
             turtle.pendown()
             turtle.forward(size_square)
             turtle.penup() 
@@ -116,12 +123,24 @@ def draw_shape(turtle, grid, size, size_square = 50):
 
     for column in range(-(size-1), 1, 1):#Coté bas ###erreur
         if grid[size-1][-column] == 1:
+            number_grid[size-1][-column] += 1
             turtle.pendown()
             turtle.forward(size_square)
             turtle.penup()
         else:
             turtle.forward(size_square)
     turtle.right(180)
+    return  number_grid
 
+def draw_number(turtle, size, size_square, number_grid):
+    style = ('Arial', size_square-10, 'normal')
+    turtle.left(90)
+    for column in range(size):
+        turtle.setpos(((0-(size*size_square))/2) + (size_square * column) + (size_square/2), ((0-(size*size_square))/2)-(size_square/10))
+        for line in range(size):  
+            turtle.write(str(number_grid[-line-1][column]), font=style, align='center')
+            turtle.forward(size_square)
+    turtle.right(90)
+            
 if __name__ == "__main__":
     print("Vous avez lancer le mauvais fichier, merci de lancer 'main.py'")

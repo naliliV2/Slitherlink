@@ -1,6 +1,6 @@
 from random import choice, randint
 
-def create_grid(size, grid):
+def create_grid(size, grid = []):
     '''
     Créé le tableau a double dimension (line, column)
 
@@ -9,9 +9,6 @@ def create_grid(size, grid):
     2 = A été déjà pris 
     '''
     grid = [[0 for i in range(size)] for j in range(size)]
-
-    for i in range(size):
-        grid[0][i], grid[size-1][i], grid[i][0], grid[i][size-1] = 1, 1, 1, 1
  
     return grid
 

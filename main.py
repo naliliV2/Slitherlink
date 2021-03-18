@@ -19,7 +19,9 @@ def reset():
 
 #Lance le progamme entier
 def start(size, size_square):
-    grid = create_grid(size, grid=[]) #mine.py
+    grid = create_grid(size) #mine.py
+    for i in range(size):
+        grid[0][i], grid[size-1][i], grid[i][0], grid[i][size-1] = 1, 1, 1, 1
     
     for _ in range(random_round(size)):
         grid, state = mine(size, grid)
@@ -27,10 +29,13 @@ def start(size, size_square):
             break
         grid = rules(size, grid)
     
-    parameter(turtle, size, size_square)
-    draw_grid(turtle, size, size_square)
+    number_grid = create_grid(size)
+
+    parameter(turtle, size, size_square) #parameter.py
+    draw_grid(turtle, size, size_square) # draw.py
     grid = transform_grid(size, grid)
-    draw_shape(turtle, grid, size, size_square)
+    number_grid = draw_shape(turtle, grid, size, size_square, number_grid)
+    draw_number(turtle, size, size_square, number_grid)
     turtle._update()
 
 def main():
