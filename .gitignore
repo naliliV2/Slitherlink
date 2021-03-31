@@ -1,2 +1,5 @@
-.vscode/launch.json
+
+*.png
+*.svg
 *.pyc
+*.json
