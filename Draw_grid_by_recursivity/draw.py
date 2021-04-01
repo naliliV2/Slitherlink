@@ -37,9 +37,9 @@ def ouest(turtle):
     turtle.setposition(tpos[0] - 100, tpos[1])
     turtle.penup() 
 
-def execution(turtle, path): 
+def execution(turtle, path, start_x, start_y): 
     turtle.penup()
-    turtle.setposition(-150, 165)
+    turtle.setposition(-150 + (100*start_x), 165+(0-100*start_y))
 
     for i in range(len(path)):
         if path[i] == "N":
@@ -68,7 +68,7 @@ def get_image(screen, path):
             continue
     renderPM.drawToFile(drawing, pathfile+"grid.png", fmt="PNG")
     
-def main_draw_grid(path):
+def main_draw_grid(path, start_x, start_y):
     screen = Screen()
     turtle = Turtle()
     turtle._tracer(1, 1)
@@ -77,7 +77,7 @@ def main_draw_grid(path):
     turtle.ht()
 
     draw_grid(turtle)
-    execution(turtle, path)
+    execution(turtle, path, start_x, start_y)
     get_image(screen, path)
     
     turtle._update()

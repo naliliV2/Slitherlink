@@ -11,12 +11,12 @@ sens = struct(name = ["Nord", "Est", "Sud", "Ouest"], name_invert = ["Sud", "Oue
 def recursif(x, y, origine_sens, start, final, round, grid, path = []):
     grid[y][x] = round
     if final.x == x and final.y == y:
-        print(path)
-        for lign in range(4):
-            print(grid[lign])
-        print("------------")
+        #print(path)
+        #for lign in range(4):
+        #    print(grid[lign])
+        #print("------------")
         pathc = path.copy()
-        main_draw_grid(pathc)
+        main_draw_grid(pathc, start.x, start.y)
         path.pop()
         grid[y][x] = 0
         return
