@@ -13,9 +13,10 @@ Il a été créé dans le cadre de l'évènement "Maths En Jean" pour mon lycée
 
 <div align="center">
 
-Non résolue|Résolue 
+<div align = "center">Non résolue</div> | <div align = "center">Résolue</div> 
 :---|---:
 <img src="Picture/no_resolved.jpg"> | <img src="Picture/no_resolved.jpg">
+
 </div>
 
 Il y a cependant quelques règles à respecter : </div>
