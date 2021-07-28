@@ -11,12 +11,12 @@ Il a été créé dans le cadre de l'évènement "Maths En Jean" pour mon lycée
 
 <div style="text-indent: 30px;">Le Slitherlink (ou loppy en Français) est un jeu de réflexion solitaire. Le but du jeu est de former une courbe fermée dans une grille comportant des nombres dans des cases indiquant le nombre de côtés où la courbe passe.</div><br>
 
-<div align="center">
 
-<div align="center">Non résolue</div>|<div align="center">Résolue</div> 
+
+Non résolue|Résolue
 :---|---:
 <img src="Picture/no_resolved.jpg"> | <img src="Picture/no_resolved.jpg">
-</div>
+
 
 Il y a cependant quelques règles à respecter : </div>
 
