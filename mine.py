@@ -19,7 +19,7 @@ def random_round(size):
     '''
     Défini le nombre de carré qu'on va mange
     '''
-    return randint(size, (size**2)-size*2)
+    return randint(size, (size**2)-(size*2)+1)
 
 def defined_mine(size, grid):   
     '''

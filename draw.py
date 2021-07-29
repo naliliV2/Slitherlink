@@ -32,7 +32,7 @@ def draw_shape(turtle, grid, size, size_square = 50):
     '''
     Dessine la figure qui a été généré en mettant un trait entre les carrés vide / plein. 
     '''
-    #Mise en place au point 0 et parametre la turtle. ##A mettre dans parameter.py dans la 1.05
+    #Mise en place au point 0 et parametre la turtle.
     turtle.penup()
     turtle.setpos((0-(size*size_square))/2, (0-(size*size_square))/2)
     turtle.left(90)
@@ -114,7 +114,7 @@ def draw_shape(turtle, grid, size, size_square = 50):
             turtle.forward(size_square)
     turtle.right(90)
 
-    for column in range(-(size-1), 1, 1):#Coté bas ###erreur
+    for column in range(-(size-1), 1, 1):#Coté bas 
         if grid[size-1][-column] == 1:
             turtle.pendown()
             turtle.forward(size_square)
