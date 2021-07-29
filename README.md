@@ -10,7 +10,7 @@
 
 </div>
 
-# Français (Attention au grammar nazi j'ai pas corriger.)
+# Français
 
 Ce programme permet de générer une grille vierge et génère une boucle aléatoire à plusieurs segment unique de slitherlink.
 Il a été créé dans le cadre de l'évènement "Maths En Jean" pour mon lycée. Il n'y aura pas de publication officiel à cause de la pandémie actuelle.<br>
