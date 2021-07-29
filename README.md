@@ -103,7 +103,7 @@ Dans ce genre de situation, merci de créé un issue et j'essayerai de voir le p
 
 > Pourquoi le github est en 3.0 alors que la release est en 2.0 ?
 
-Car la 3.0 est surtout une version d'organisation suur github, il y a effectivement quelques petites nuances dans les fichiers mais tellement minime que vous ne verrez pas la différence en tant qu'utilisateur. 
+Car la 3.0 est surtout une version d'organisation sur github, il y a effectivement quelques petites nuances dans les fichiers mais tellement minime que vous ne verrez pas la différence en tant qu'utilisateur. 
 
 # EN : 
 Not yet translated. In the futur, I translate every file and the explication of this.
