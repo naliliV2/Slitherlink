@@ -147,4 +147,4 @@ def max_take(size, grid):
     return grid
 
 if __name__ == "__main__":
-    print("Vous avez lancer le mauvais fichier, merci de lancer 'main.py'")
+    print("Vous avez lancé le mauvais fichier, merci de lancer 'main.py'")

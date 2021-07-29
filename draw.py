@@ -124,4 +124,4 @@ def draw_shape(turtle, grid, size, size_square = 50):
     turtle.right(180)
 
 if __name__ == "__main__":
-    print("Vous avez lancer le mauvais fichier, merci de lancer 'main.py'")
+    print("Vous avez lancé le mauvais fichier, merci de lancer 'main.py'")

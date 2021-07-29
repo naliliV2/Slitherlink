@@ -47,4 +47,4 @@ def mine(size, grid):
         return grid, "Stop"
 
 if __name__ == "__main__":
-    print("Vous avez lancer le mauvais fichier, merci de lancer 'main.py'")    
+    print("Vous avez lancé le mauvais fichier, merci de lancer 'main.py'")    
