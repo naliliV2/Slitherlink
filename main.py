@@ -43,5 +43,5 @@ def main():
         start(size, size_square)
 
 if __name__ == "__main__":
-    print("Faite 'help' pour avoir plus d'information, sinon appuyez sur entrer pour lancer le programme")
+    print("Faites 'help' pour avoir plus d'information, sinon appuyez sur ENTER pour lancer le programme")
     main()    
