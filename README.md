@@ -6,8 +6,6 @@
 ![](https://img.shields.io/badge/Language-Python-yellow)
 ![](https://img.shields.io/badge/Size-2Mo-red)
 
-![:nalili_Slitherlink](https://count.getloli.com/get/@s:nalili_Slitherlink?theme=rule34)
-
 </div>
 
 # Français
